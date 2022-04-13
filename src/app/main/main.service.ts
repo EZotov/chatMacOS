@@ -70,14 +70,14 @@ export class MainService {
 
   addUserInfoToMessage(message : Message, users : User[]) : NewMessage {
     let findedUser : any = users.find(user => user.userName === message.authorUserName);
-      let newMessage : NewMessage = {
-        idMessage : message.idMessage,
-        text: message.text,
-        date : message.date,
-        author : findedUser,
-        showDateLine : false
-      }
-      return newMessage;
+    let newMessage : NewMessage = {
+      idMessage : message.idMessage,
+      text: message.text,
+      date : message.date,
+      author : findedUser,
+      showDateLine : false
+    }
+    return newMessage;
   }
 
   changeDisplayDateLineMode(messageList : NewMessage[]) : NewMessage[] {

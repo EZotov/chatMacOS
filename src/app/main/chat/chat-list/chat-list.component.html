@@ -3,7 +3,7 @@
     <li *ngFor="let message of viewMessageList" class="chatListItem">
       <div *ngIf="message.showDateLine" class="dateMessagesContainer">
         <div class="dateMessagesContainer__line"></div>
-        <span class="dateMessagesContainer__date">{{message.date | date : "EEEE, MMMM d, y"}}</span>
+        <span class="dateMessagesContainer__date">{{message.date.toDateString() === todayStr ? 'Today' : message.date.toDateString() === yesterdayStr ? 'Yesterday' : (message.date | date : "EEEE, MMMM d, y")}}</span>
         <div class="dateMessagesContainer__line"></div>
       </div>
       <div class="chatListWrapper">

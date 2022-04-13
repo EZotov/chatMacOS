@@ -36,6 +36,10 @@ export class ChatListComponent implements OnChanges{
     photo : ""
   };
 
+  today : Date = new Date();
+  todayStr : string = new Date().toDateString();
+  yesterdayStr : string = new Date(this.today.setDate(this.today.getDate() - 1)).toDateString();
+
   usersList$ : Observable<User[]> = this.store.select(usersSelector);
   searchText$ : Observable<string> = this.store.select(searchTextSelector);
 
@@ -75,8 +79,6 @@ export class ChatListComponent implements OnChanges{
     });
 
     if (this.messageList.length) {
-      console.log(this.messageList);
-
       this.messageList = this.service.changeDisplayDateLineMode(this.messageList);
     }
 
