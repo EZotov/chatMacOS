@@ -1,0 +1,6 @@
+<form class="chatForm" [formGroup]="messageForm" (keyup.enter)="onSubmitChatForm($event)">
+  <button class="chatForm__attachmentBtn"></button>
+  <button class="chatForm__microphone"></button>
+  <textarea class="chatForm__text" type="textarea" name="chatText" [placeholder]="placeholder" formControlName="message" (keydown.enter)="onKeyDownEnter($event)"></textarea>
+  <button class="chatForm__smileBtn"></button>
+</form>

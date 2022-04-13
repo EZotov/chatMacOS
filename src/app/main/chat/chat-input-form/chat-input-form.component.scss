@@ -1,0 +1,40 @@
+.chatForm {
+  display: flex;
+  padding: 17px 23px 15px 20px;
+  align-items: center;
+  border-top : 1px solid #0000001a;
+  .chatForm__attachmentBtn {
+    width: 15px;
+    height: 21px;
+    background: url('/assets/icons/attachment.svg') no-repeat center;
+    border : none;
+    cursor: pointer;
+  }
+  .chatForm__microphone {
+    margin-left: 18px;
+    width: 15px;
+    height: 21px;
+    background: url('/assets/icons/microphone.svg') no-repeat center;
+    border : none;
+    cursor: pointer;
+  }
+  .chatForm__text {
+    padding-top: 13px;
+    flex-grow: 1;
+    border : none;
+    height: 42px;
+    resize: none;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .chatForm__text:focus {
+    outline: none;
+  }
+  .chatForm__smileBtn {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border:none;
+      background: url('/assets/icons/smile.svg') no-repeat center;
+  }
+}

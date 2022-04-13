@@ -1,0 +1,12 @@
+<div class="friendListContainer">
+  <div class="friendListHeader">
+    <h2 class="friendListHeader__headline">FRIENDS</h2>
+    <span class="friendListHeader__count">{{usersCount}}</span>
+  </div>
+  <ul class="friendList">
+    <li *ngFor="let user of usersList$ | async" [ngClass]="friendListItemClasses(user)" (click)="onClickUser(user)">
+      <img class="friendListItem__image" [src]="user?.photo" alt="Личная фотография">
+      <span class="friendListItem__name">{{user.name}}</span>
+    </li>
+  </ul>
+</div>

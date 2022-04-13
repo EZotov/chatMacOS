@@ -1,0 +1,26 @@
+<div class="authFormContainer">
+  <h2 class="">Авторизация</h2>
+  <form class="authForm" [formGroup]="authForm" (submit)="onSubmitAuthForm()">
+    <div class="loginGroup">
+      <label class="loginGroup__label" for="">Логин</label>
+      <input class="loginGroup__textinput" formControlName="login" type="text" name="login">
+      <span *ngIf="authForm.controls['login'].errors?.['required'] && submitted" class="loginGroup__notification">Поле является обязательным</span>
+    </div>
+    <div class="passwordGroup">
+      <label class="passwordGroup__label" for="">Пароль</label>
+      <input class="passwordGroup__textinput" formControlName="password" type="password" name="password">
+      <span *ngIf="authForm.controls['password'].errors?.['required'] && submitted" class="passwordGroup__notification">Поле является обязательным</span>
+    </div>
+    <button class="authForm__submitBtn" type="submit" name="button">Войти</button>
+  </form>
+  <div *ngIf="authForm.controls['password'].errors?.['pattern'] && submitted || authForm.controls['login'].errors?.['pattern'] && submitted" class="errorAuth">
+    <p class="errorAuthText">
+      {{errorMessage}}
+    </p>
+  </div>
+  <div *ngIf="authSuccess && submitted" class="errorAuth">
+    <p class="errorAuthText">
+      {{submitErrorMessage}}
+    </p>
+  </div>
+</div>

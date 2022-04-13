@@ -1,0 +1,180 @@
+.profileOuterContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 201px;
+}
+
+.profileWrapper {
+  .profileWrapper__image {
+    width: 200px;
+  }
+  .profileInfo {
+    margin-top: 12px;
+    padding: 0px 19px 0px 21px;
+    .profileInfo__name {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+      display: inline-block;
+      position: relative;
+      padding-right: 13px;
+    }
+    .profileInfo__name::after {
+      display: block;
+      position: absolute;
+      top : 50%;
+      right: 0px;
+      transform: translate(0, -50%);
+      content: '';
+      width: 6px;
+      height: 6px;
+      background-color: #666666;
+      border-radius: 50px;
+    }
+    .profileInfo__name_online::after {
+      background-color: #70CC16;
+    }
+    .profileInfo__job {
+      margin-top: 5px;
+      font-size: 12px;
+      color: #5F6164;
+      line-height: 14px;
+      display: block;
+    }
+    .linksContainer {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      margin-top: 20px;
+      .linksContainerItem {
+        border-radius: 50px;
+        background-color: #ffffff;
+        margin-right: 5px;
+        width: 22px;
+        height: 22px;
+        .linksContainerItem__link {
+          display: block;
+          width: 100%;
+          height: 100%;
+          cursor: pointer;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+        .linksContainerItem__link_facebook {
+          background-image: url('/assets/icons/facebook.svg');
+        }
+        .linksContainerItem__link_twitter {
+          background-image: url('/assets/icons/twitter.svg');
+        }
+        .linksContainerItem__link_instagram {
+          background-image: url('/assets/icons/instagram.svg');
+        }
+        .linksContainerItem__link_linkedin {
+          background-image: url('/assets/icons/linkedIn.svg');
+          background-position: center 4px;
+        }
+      }
+      .linksContainer__item:last-child {
+        margin-right: 0;
+      }
+    }
+    .profileControls {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 19px;
+      .profileControls__messageBtn {
+        background-color: #3577EF;
+        width: 133px;
+        height: 24px;
+        padding: 5px 10px;
+        text-align: center;
+        border-radius: 5px;
+        border : none;
+        color : #ffffff;
+        cursor : pointer;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 16px;
+      }
+      .profileDropdown {
+        position: relative;
+        .profileDropdown__dropdownBtn {
+          width: 25px;
+          height: 25px;
+          background-color: #3577EF;
+          border : none;
+          border-radius: 5px;
+          background-image: url('/assets/icons/arrow_2.svg');
+          background-repeat: no-repeat;
+          background-position: center;
+          cursor : pointer;
+          margin-left: 5px;
+        }
+        .profileDropdownList {
+          position: absolute;
+          list-style: none;
+          padding: 0px 5px;
+          height: 0px;
+          margin: 0;
+          width: 161px;
+          background: #3577EF;
+          color: #ffffff;
+          border-radius: 5px;
+          right : 0;
+          font-size: 12px;
+          font-weight: 700;
+          overflow: hidden;
+          transition: ease 0.2s all;
+          .profileDropdownListItem {
+            margin-bottom: 2px;
+            cursor: pointer;
+          }
+          .profileDropdownListItem:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .profileDropdown_opened {
+        .profileDropdownList {
+            padding: 10px 5px;
+            height: auto;
+            transition: ease 0.2s all;
+        }
+      }
+    }
+  }
+  .profileContacts {
+    margin-top: 14px;
+    .fieldGroup {
+      margin-bottom: 11px;
+      .fieldGroup__label {
+        display: block;
+        margin-bottom: 2px;
+        font-size: 12px;
+        line-height: 14px;
+        color: #5F6164;
+      }
+      .fieldGroup__value {
+        display: block;
+        line-height: 17px;
+      }
+    }
+  }
+}
+
+.backBtnContainer {
+  display: flex;
+  padding: 0px  22px 28px 19px;
+  justify-content: flex-end;
+  .backBtnContainer__closeBtn {
+    border : none;
+    width: 10px;
+    height: 16px;
+    background: url('/assets/icons/arrow_3.svg') no-repeat center;
+    cursor: pointer;
+  }
+}

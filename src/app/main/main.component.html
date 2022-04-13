@@ -1,0 +1,20 @@
+<main class="mainContainer">
+  <div class="fixed-container">
+    <div class="appContentWrapper">
+      <section class="menuContainer">
+        <h2 class="menuContainer__headline visually-hidden">Управление приложением</h2>
+        <menu-container></menu-container>
+      </section>
+
+      <section class="chatContainer">
+        <h2 class="chatContainer__headline visually-hidden">Блок чата</h2>
+        <chat></chat>
+      </section>
+
+      <section [ngClass]="profileContainerClasses">
+        <h2 class="profileContainer__headline visually-hidden">Профиль</h2>
+        <profile [user]="selectedProfile"></profile>
+      </section>
+    </div>
+  </div>
+</main>

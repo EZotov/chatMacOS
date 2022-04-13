@@ -1,0 +1,10 @@
+.chatWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+chat-list {
+  flex-grow: 1;
+  overflow-y: auto;
+}

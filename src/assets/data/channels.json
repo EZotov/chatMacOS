@@ -1,0 +1,61 @@
+{
+  "value" : [
+    {
+      "title" : "general",
+      "members" : [
+        "ordi", "carmen_1221", "marie_97", "alex_2212"
+      ],
+      "messages" : [
+        {
+          "idMessage" : "1",
+          "text" : "Привет!",
+          "date" : "2022-03-10T08:05:00Z",
+          "author" : "ordi"
+
+        },
+        {
+          "idMessage" : "2",
+          "text" : "Добрый день!)",
+          "date" : "2022-03-10T08:07:00Z",
+          "author" : "alex_2212"
+        }
+      ]
+    },
+    {
+      "title" : "support",
+      "members" : [
+        "stevieR007", "jessica_323"
+      ],
+      "messages" : [
+
+      ]
+    },
+    {
+      "title" : "marketing",
+      "members" : [
+        "bc123", "marie_97"
+      ],
+      "messages" : [
+
+      ]
+    },
+    {
+      "title" : "freelance",
+      "members" : [
+        "gill_top", "luna44"
+      ],
+      "messages" : [
+
+      ]
+    },
+    {
+      "title" : "jobs",
+      "members" : [
+        "luna44", "creed_78"
+      ],
+      "messages" : [
+
+      ]
+    }
+  ]
+}

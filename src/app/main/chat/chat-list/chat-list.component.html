@@ -1,0 +1,14 @@
+<div class="chatListcontainer">
+  <ul class="chatList">
+    <li *ngFor="let message of viewMessageList" class="chatListItem">
+      <img class="chatListItem__photo" [src]="message.author.photo" alt="Фото автора">
+      <div class="chatListItemTextContainer">
+        <div class="chatListItemInfo">
+          <h3 class="chatListItemInfo__authorName" (click)="onClickAuthorOfMessage(message.author)">{{message.author.name}}</h3>
+          <span class="chatListItemInfo__time">{{message.date | date : "hh:mm a"}}</span>
+        </div>
+        <p class="chatListItemTextContainer__message">{{message.text}}</p>
+      </div>
+    </li>
+  </ul>
+</div>

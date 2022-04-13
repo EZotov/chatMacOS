@@ -1,0 +1,11 @@
+<div class="channelContainer">
+  <div class="channelHeader">
+    <h2 class="channelContainer__headline">Channels</h2>
+    <span class="channelContainer__countChannels">{{channelCount}}</span>
+  </div>
+  <ul class="channelList">
+    <li *ngFor="let channel of channelList$ | async" [ngClass]="channelListItemClasses(channel)">
+      <a class="channelListItem__link" [routerLink]="['/main' , channel.title]"># {{channel.title}}</a>
+    </li>
+  </ul>
+</div>

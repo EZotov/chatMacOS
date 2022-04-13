@@ -1,0 +1,72 @@
+.authFormContainer {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center;
+  border-radius: 20px;
+  background: #3c3b3b;
+  padding: 20px 20px;
+  color: #ffffff;
+  width: 400px;
+}
+.authForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  .loginGroup, .passwordGroup {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .loginGroup__textinput, .passwordGroup__textinput{
+    margin-top: 10px;
+    border: none;
+    padding: 0 10px;
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+    background: #4c4c4c;
+    color: #ffffff;
+  }
+
+  .loginGroup__label, .passwordGroup__label {
+    text-align: left;
+    padding: 0 10px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .loginGroup__notification, .passwordGroup__notification {
+    margin-top: 10px;
+  }
+
+  .loginGroup {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .authForm__submitBtn {
+    margin-top: 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px 20px;
+    background: #0a855d;
+    color: #ffffff;
+    height: 30px;
+  }
+
+  .authForm__submitBtn:hover {
+    background: #0d563e;
+  }
+}
+
+.errorAuth {
+  margin-top: 20px;
+}
+
+.errorAuthText {
+  font-weight: bold;
+  color : #f12d2d;
+}

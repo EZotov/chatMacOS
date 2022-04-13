@@ -1,0 +1,54 @@
+<div class="profileOuterContainer">
+  <div class="profileWrapper">
+    <img class="profileWrapper__image" [src]="user.photo" alt="Фото профиля">
+    <div class="profileInfo">
+      <h2 [ngClass]="profileInfoNameClasses">{{user.name}}</h2>
+      <span class="profileInfo__job">{{user.jobTitle}}</span>
+      <ul class="linksContainer">
+        <li class="linksContainerItem">
+          <a class="linksContainerItem__link linksContainerItem__link_facebook"></a>
+        </li>
+        <li class="linksContainerItem">
+          <a class="linksContainerItem__link linksContainerItem__link_twitter"></a>
+        </li>
+        <li class="linksContainerItem">
+          <a class="linksContainerItem__link linksContainerItem__link_instagram"></a>
+        </li>
+        <li class="linksContainerItem">
+          <a class="linksContainerItem__link linksContainerItem__link_linkedin"></a>
+        </li>
+      </ul>
+
+      <div class="profileControls">
+        <button class="profileControls__messageBtn" type="button" name="button">Message</button>
+        <div #profileDropDown [ngClass]="profileClasses">
+          <button class="profileDropdown__dropdownBtn" type="button" name="button" (click)="onClickProfileDropdownBtn()"></button>
+          <ul class="profileDropdownList">
+            <li *ngFor="let menuItem of profileControlsMenu" class="profileDropdownListItem">{{menuItem}}</li>
+          </ul>
+        </div>
+      </div>
+      <div class="profileContacts">
+        <div class="fieldGroup">
+          <label class="fieldGroup__label">Username</label>
+          <span class="fieldGroup__value">{{user.userName}}</span>
+        </div>
+        <div class="fieldGroup">
+          <label class="fieldGroup__label">Email</label>
+          <span class="fieldGroup__value">{{user.mail}}</span>
+        </div>
+        <div class="fieldGroup">
+          <label class="fieldGroup__label">Skype</label>
+          <span class="fieldGroup__value">{{user.skype}}</span>
+        </div>
+        <div class="fieldGroup">
+          <label class="fieldGroup__label">Timezone</label>
+          <span class="fieldGroup__value">{{date | date : "hh:mm a"}} {{user.timezone}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="backBtnContainer">
+    <button class="backBtnContainer__closeBtn" type="button" (click)="onClickCloseProfileBtn()"></button>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+.appContentWrapper {
+  display: flex;
+  height: 100vh;
+  background-color: #ffffff;
+  background-image: url('/assets/parker-amstutz-691364-unsplash copy.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.chatContainer {
+  background-color: #ffffff;
+  flex-grow: 1;
+}
+
+.profileContainer {
+  background-color: #ffffffbd;
+  overflow-x: hidden;
+  width: 0px;
+  transition: ease all 0.3s;
+}
+
+.profileContainer_opened {
+  width: 201px;
+  transition: ease all 0.3s;
+}

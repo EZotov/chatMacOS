@@ -1,0 +1,64 @@
+.friendListContainer {
+  margin-top: 8px;
+  color: #919191;
+  .friendListHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+    .friendListHeader__headline {
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 14px;
+      text-transform: uppercase;
+    }
+    .friendListHeader__count {
+      font-size: 12px;
+      font-weight: bold;
+    }
+  }
+  .friendList {
+    list-style: none;
+    padding-bottom: 0;
+    margin: 0;
+    padding-left: 0;
+    padding-top: 21px;
+    padding-right: 25px;
+    max-height: 370px;
+    scrollbar-width: thin;
+    overflow-y: auto;
+    .friendListItem {
+      display: flex;
+      align-items: center;
+      color: #B5B5B5;
+      padding-left: 14px;
+      margin-bottom: 12px;
+      position: relative;
+      cursor: pointer;
+      .friendListItem__image {
+        border-radius: 5px;
+        margin-right: 11px;
+        width: 32px;
+        height: 32px;
+      }
+    }
+    .friendListItem:last-child {
+      margin-bottom: 0;
+    }
+    .friendListItem::before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
+      background-color: #666666;
+      width: 7px;
+      height: 7px;
+      border-radius: 50px;
+    }
+    .friendListItem_online::before {
+      background-color: #70CC16;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "value" : [
+    {
+      "userName" : "ordi",
+      "name" : "Orlando Diggs",
+      "status" : "Online",
+      "jobTitle" : "UI Designer",
+      "mail" : "ordi@gmail.com",
+      "skype" : "ordi",
+      "timezone" : "Local time",
+      "photo" : "/assets/photos/image1.png"
+    },
+    {
+      "userName" : "carmen_1221",
+      "name" : "Carmen Velasco",
+      "status" : "Online",
+      "jobTitle" : "Developer",
+      "mail" : "carmen_1221@gmail.com",
+      "skype" : "carmen_1221",
+      "timezone" : "Local time",
+      "photo" : "/assets/photos/image2.png"
+    },
+    {
+      "userName" : "marie_97",
+      "name" : "Marie Jensen",
+      "status" : "Offline",
+      "jobTitle" : "Market",
+      "mail" : "marie_97@gmail.com",
+      "skype" : "marie_97",
+      "timezone" : "Local time",
+      "photo" : "/assets/photos/image3.png"
+    },
+    {
+      "userName" : "alex_2212",
+      "name" : "Alex Lee",
+      "status" : "Offline",
+      "jobTitle" : "Sales Manager",
+      "mail" : "alex_2212@gmail.com",
+      "skype" : "alex_2212",
+      "timezone" : "Local time",
+      "photo" : "/assets/photos/image4.png"
+    },
+    {
+      "userName" : "gill_top",
+      "name" : "Leo Gill",
+      "status" : "Offline",
+      "jobTitle" : "Frontend Developer",
+      "mail" : "gill_top@gmail.com",
+      "skype" : "gill_top",
+      "timezone" : "Local time",
+      "photo" : "/assets/photos/image5.png"
+    },
+    {
+      "userName" : "bc123",
+      "name" : "Britney Cooper",
+      "status" : "Offline",
+      "jobTitle" : "Sales Manager",
+      "mail" : "bc123@gmail.com",
+      "skype" : "bc123",
+      "timezone" : "Local time",
+      "photo" : "/assets/photos/image6.png"
+    },
+    {
+      "userName" : "luna44",
+      "name" : "Amilia Luna",
+      "status" : "Online",
+      "jobTitle" : "UI Designer",
+      "mail" : "luna44@gmail.com",
+      "skype" : "luna44",
+      "timezone" : "Local time",
+      "photo" : "/assets/photos/Object.png"
+    }
+  ]
+}

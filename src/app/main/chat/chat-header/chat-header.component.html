@@ -1,0 +1,17 @@
+<div class="chatHeaderContainer">
+  <div class="leftChatHeader">
+    <h2 class="leftChatHeader__headline">#{{currentChannel?.title}}</h2>
+    <button class="leftChatHeader_favouriteBtn" type="button"></button>
+  </div>
+  <div class="rightChatHeaderContainer">
+    <span class="rightChatHeaderContainer__countMembers">{{channelMembersCount}}</span>
+    <form [formGroup]="searchForm" class="chatSearchForm">
+      <div class="searchWrapper">
+        <input formControlName="searchText" class="searchWrapper__input" name="searchText" type="text" placeholder="Search...">
+        <button class="searchWrapper__submitBtn" type="submit"></button>
+      </div>
+    </form>
+    <button class="rightChatHeaderContainer__notificationBtn" type="button"></button>
+    <button class="rightChatHeaderContainer__settingsBtn" type="button"></button>
+  </div>
+</div>

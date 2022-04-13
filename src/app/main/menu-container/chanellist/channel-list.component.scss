@@ -1,0 +1,48 @@
+.channelContainer {
+  margin-top: 30px;
+  color: #919191;
+  .channelHeader {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 19px;
+    .channelContainer__headline {
+      padding-top: 2px;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 14px;
+      text-transform: uppercase;
+    }
+    .channelContainer__countChannels {
+      font-size: 12px;
+    }
+  }
+}
+
+.channelList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-top: 14px;
+  padding-right: 19px;
+  min-height: 250px;
+  max-height: 318px;
+  scrollbar-width: thin;
+  overflow-y: auto;
+  .channelListItem {
+    margin-bottom: 1px;
+    border-radius: 5px;
+    .channelListItem__link {
+      color: #B5B5B5;
+      display: block;
+      padding: 4px 13px 7px 13px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .channelListItem:last-child {
+    margin-bottom: 0;
+  }
+  .channelListItem_active{
+    background: #ffffff36;
+  }
+}

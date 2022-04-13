@@ -1,0 +1,50 @@
+.chatListcontainer {
+  padding: 0px 0px 0px 0px;
+  .chatList {
+    list-style: none;
+    margin: 0;
+    padding: 0px 23px 0px 22px;
+    scrollbar-width: thin;
+    .chatListItem {
+      padding: 22px 0px 20px 0px;
+      display: flex;
+      align-items: flex-start;
+      .chatListItem__photo {
+        margin-right: 12px;
+        width: 32px;
+        height: 32px;
+        border-radius: 5px;
+      }
+      .chatListItemTextContainer {
+        width: 100%;
+        .chatListItemInfo {
+          display: flex;
+          align-items: center;
+          line-height: 14px;
+          font-size: 12px;
+          .chatListItemInfo__authorName {
+            margin: 0;
+            font-weight: bold;
+            font-size: inherit;
+            cursor: pointer;
+          }
+          .chatListItemInfo__authorName:hover {
+            text-decoration: underline;
+          }
+          .chatListItemInfo__time {
+            margin-left: 8px;
+            color: #8D8D8D;
+          }
+        }
+        .chatListItemTextContainer__message {
+          margin-top: 1px;
+          font-size: 13px;
+          line-height: 18px;
+        }
+      }
+    }
+    .chatListItem:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

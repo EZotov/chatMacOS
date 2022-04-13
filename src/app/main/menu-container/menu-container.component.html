@@ -1,0 +1,58 @@
+<div class="menuWrapper">
+  <div class="leftMenu">
+    <div class="leftMenu-topContainer">
+      <div class="dots">
+        <span class="dots__item dots__item_red"></span>
+        <span class="dots__item dots__item_yellow"></span>
+        <span class="dots__item dots__item_green"></span>
+      </div>
+      <ul class="groupContainer">
+        <li class="groupContainerItem">
+          <button class="groupContainerItem__groupBtn groupContainerItem__groupBtn_1" type="button"></button>
+        </li>
+        <li class="groupContainerItem">
+          <button class="groupContainerItem__groupBtn groupContainerItem__groupBtn_2" type="button"></button>
+        </li>
+        <li class="groupContainerItem">
+          <button class="groupContainerItem__groupBtn groupContainerItem__groupBtn_3" type="button"></button>
+        </li>
+        <li class="groupContainerItem">
+          <button class="groupContainerItem__groupBtn groupContainerItem__groupBtn_4" type="button"></button>
+        </li>
+        <li class="groupContainerItem">
+          <button class="groupContainerItem__groupBtn groupContainerItem__groupBtn_5" type="button"></button>
+        </li>
+        <li class="groupContainerItem">
+          <button class="groupContainerItem__groupBtn groupContainerItem__groupBtn_6" type="button"></button>
+        </li>
+        <li class="groupContainerItem">
+          <button class="groupContainerItem__groupBtn groupContainerItem__groupBtn_7" type="button"></button>
+        </li>
+      </ul>
+    </div>
+    <button aria-label="Добавить группу" class="leftMenu__addBtn" type="button" name="button"></button>
+  </div>
+
+  <div class="listMenu">
+    <div class="listWrapper">
+      <div #dropDown [ngClass]="dropdownClasses">
+        <div class="dropdownInput" (click)="onClickSelectList()">
+          <div class="dropdownInput__select" type="text" name="listSelect" value="Nomad List" disabled>{{selectedList}}</div>
+          <span class="dropdownInput__icon"></span>
+        </div>
+        <ul class="dropdownList">
+          <li *ngFor="let item of list" class="dropdownList__item" (click)="onClickSelectingItem(item)">{{item}}</li>
+        </ul>
+      </div>
+      <button aria-label="Открыть настройки" class="listWrapper__settingsBtn" type="button" name="settings"></button>
+    </div>
+
+    <div class="filter">
+      <button aria-label="Открыть фильтры" class="filter__btn" type="button" name="button"></button>
+      <span class="filter__select">All treads</span>
+    </div>
+
+    <channel-list></channel-list>
+    <friend-list></friend-list>
+  </div>
+</div>
