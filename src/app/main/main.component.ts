@@ -3,7 +3,7 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs'
 import { User, Channel } from '../enteties/enteties';
 import { loadUsers, loadChannels } from '../store/app.actions';
-import { firsChannelSelector, selectedPrifileSelector, loginUserSelector } from '../store/app.selectors';
+import { firsChannelSelector, selectedProfileSelector, loginUserSelector } from '../store/app.selectors';
 import { Router } from '@angular/router';
 
 @Component({
@@ -24,7 +24,7 @@ export class MainComponent {
   };
   openedProfile : boolean = false;
 
-  selectedProfile$ : Observable<any> = this.store.select(selectedPrifileSelector);
+  selectedProfile$ : Observable<any> = this.store.select(selectedProfileSelector);
   firstChannel$ : Observable<Channel | null> = this.store.select(firsChannelSelector);
   loginUser$ : Observable<User> = this.store.select(loginUserSelector);
 

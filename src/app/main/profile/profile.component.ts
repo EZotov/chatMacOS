@@ -1,4 +1,4 @@
-import { Component, Input, ViewChild, HostListener } from '@angular/core';
+import { Component, Input, ViewChild, HostListener, OnChanges } from '@angular/core';
 import { User } from '../../enteties/enteties';
 import { Store } from '@ngrx/store';
 import { closeProfile } from '../../store/app.actions';
@@ -13,7 +13,7 @@ import { closeProfile } from '../../store/app.actions';
   }
 )
 
-export class ProfileComponent {
+export class ProfileComponent implements OnChanges {
   @Input()
   user : User = {
     userName : "luna44",
@@ -42,6 +42,10 @@ export class ProfileComponent {
     private store : Store
   ) {
 
+  }
+
+  ngOnChanges() : void {
+    this.date = new Date();
   }
 
   @HostListener('document:click', ['$event'])

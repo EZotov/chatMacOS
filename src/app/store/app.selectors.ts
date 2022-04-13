@@ -10,7 +10,7 @@ export const usersSelector = createSelector(
   (state) => state.users
 );
 
-export const selectedPrifileSelector = createSelector(
+export const selectedProfileSelector = createSelector(
   featureUsersSelector,
   (state) => {
     return {
