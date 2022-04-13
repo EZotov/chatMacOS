@@ -41,6 +41,7 @@ export class ChatListComponent implements OnChanges{
 
   viewMessageList : NewMessage[] = [];
   messageList : NewMessage[] = [];
+  usersList : User[] = [];
 
   constructor(
     private store : Store,
@@ -55,26 +56,33 @@ export class ChatListComponent implements OnChanges{
 
   ngOnChanges() : void {
     this.messageList = [];
-    this.usersList$.subscribe(users => {
-      this.currentChannel.messages.forEach((message : Message) => {
-        if (message.authorUserName === 'user') {
-          const newMessage : NewMessage = {
-            idMessage : message.idMessage,
-            date : message.date,
-            text : message.text,
-            author : this.loginUser
-          }
-          this.messageList.push(newMessage);
+    this.usersList$.subscribe(users => this.usersList = users);
+
+    this.currentChannel.messages.forEach((message : Message) => {
+      if (message.authorUserName === 'user') {
+        const newMessage : NewMessage = {
+          idMessage : message.idMessage,
+          date : message.date,
+          text : message.text,
+          author : this.loginUser,
+          showDateLine : false
         }
-        else {
-          this.messageList.push(this.service.addUserInfoToMessage(message, users));
-        }
-      });
+        this.messageList.push(newMessage);
+      }
+      else {
+        this.messageList.push(this.service.addUserInfoToMessage(message, this.usersList));
+      }
     });
+
+    if (this.messageList.length) {
+      console.log(this.messageList);
+
+      this.messageList = this.service.changeDisplayDateLineMode(this.messageList);
+    }
 
     this.searchText$.subscribe(searchText => {
       if (searchText) {
-        this.viewMessageList = this.messageList.filter(message => message.text.toLowerCase().includes(searchText.toLowerCase()));
+        this.viewMessageList = this.service.changeDisplayDateLineMode(this.messageList.filter(message => message.text.toLowerCase().includes(searchText.toLowerCase())));
       }
       else {
         this.viewMessageList = this.messageList;

@@ -27,5 +27,6 @@ export interface NewMessage {
   idMessage : number,
   text : string,
   author : User,
-  date : Date
+  date : Date,
+  showDateLine : boolean
 }

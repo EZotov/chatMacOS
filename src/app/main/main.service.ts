@@ -74,8 +74,26 @@ export class MainService {
         idMessage : message.idMessage,
         text: message.text,
         date : message.date,
-        author : findedUser
+        author : findedUser,
+        showDateLine : false
       }
       return newMessage;
+  }
+
+  changeDisplayDateLineMode(messageList : NewMessage[]) : NewMessage[] {
+    const newMessgaeList : any = messageList.map((message : NewMessage, i : number, messages : NewMessage[]) => {
+      if (i !== 0) {
+        if (message.date.toLocaleString('ru-RU').substring(0, 9) !== messages[i-1].date.toLocaleString('ru-RU').substring(0, 9)) {
+          return {...message, showDateLine : true};
+        }
+        else {
+          return message;
+        }
+      }
+      else {
+        return {...message, showDateLine : true};
+      }
+    });
+    return newMessgaeList;
   }
 }
